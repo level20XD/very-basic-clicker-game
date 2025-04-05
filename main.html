@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:dodgerblue;
+        }
+        .center {
+            text-align:center
+        }
+        .counter {
+            font-family: verdana;
+            font-size:50px;
+            color:navy;
+        }
+        .button{
+            user-select:none;
+            padding:15px;
+            width:100px;
+            border-radius:15px;
+            margin: auto;
+            font-size:25px;
+            background-color:aqua;
+            box-shadow: 0 10px rgb(0, 0, 52);
+        }
+        .button:active{
+            box-shadow:none;
+            transform: translate(0,10px);
+        }
+        .upgrade {
+            user-select:none;
+            background-color: skyblue;
+            font-family:Verdana;
+            border: 3px solid black;
+            padding:10px;
+            margin:auto;
+            width:75px;
+            border-radius:5px;
+        }
+        .upgrade:hover {
+            background-color: lightblue;
+        }
+        .upgrade:active {
+            background-color: lightcyan;
+        }
+        .upgradelimit{
+            margin-top:20px;
+            margin-bottom:0;
+            font-family: verdana;
+        }
+        .cost{
+            margin:0;
+            font-family: verdana;
+            color:red;
+        }
+        #winbutton{
+            width:125px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center" style="font-family: arial">Very Basic Clicker Game</h1>
+    <h1 class="center counter" id="counter">0</h1>
+    <p id="percounter" class="center"></p>
+    <p id="secondcounter" class="center"></p>
+    <div class="center button" id="button">Click</div>
+    <!-- Click -->
+    <p class="center upgradelimit" id="perlimit">0/10</p>
+    <p style="color:lawngreen;" class="center cost" id="percost">0 clicks</p>
+    <div class="center upgrade" id="perclick">+1 click</div>
+    <!-- Clicks per second -->
+    <p class="center upgradelimit" id="secondlimit">0/10</p>
+    <p class="center cost" id="secondcost">100 clicks</p>
+    <div class="center upgrade" id="persecond">+5 cps</div>
+    <!-- Win -->
+    <p class="center upgradelimit" id="winlimit">0/1</p>
+    <p class="center cost" id="wincost">10000 clicks + MAX upgrades</p>
+    <div class="center upgrade" id="winbutton">beat the game</div>
+    <script src="code.js"></script>
+</body>
+</html>
