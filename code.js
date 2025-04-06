@@ -8,8 +8,8 @@ const clickupgrade = document.getElementById("perclick");
 const secondupgrade = document.getElementById("persecond");
 const winbutton = document.getElementById("winbutton");
 
-const clickercost = [0, 50, 100, 250, 500, 700, 1000, 1500, 2000, 3000]
-const secondcost = [100, 250, 500, 700, 1000, 1500, 2000, 2500, 3250, 4000]
+const clickercost = [0, 50, 100, 200, 400, 650, 900, 1200, 1500, 2000];
+const secondcost = [50, 100, 200, 400, 650, 900, 1200, 1500, 2000, 2500];
 
 button.onclick = function(){
     clicks += perclick;
@@ -28,7 +28,7 @@ function refreshCosts() {
     } else {
         document.getElementById("secondcost").style.color = "red";
     };
-    if (clicks >= 10000 && perclick >= 10 && persecond >= 50){
+    if (clicks >= 5000 && perclick >= 10 && persecond >= 50){
         document.getElementById("wincost").style.color = "lawngreen";
         winavailable = 1;
     } else {
