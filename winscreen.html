@@ -38,6 +38,7 @@
             margin: auto;
             width:200px;
             margin-top:5px;
+            cursor:pointer;
         }
     </style>
 </head>
@@ -45,6 +46,15 @@
     <h1>You win!</h1>
     <h2>Thank you for playing!</h2>
     <a href="https://github.com/level20XD">My GitHub page!</a>
-    <img src="https://media.tenor.com/EI8GDBpPCDoAAAAM/tbh-creature.gif">
+    <img id="yippee" src="https://media.tenor.com/EI8GDBpPCDoAAAAM/tbh-creature.gif">
+    <audio src="yippee.mp3" id="sound"></audio>
+    <script>
+        let image = document.getElementById("yippee");
+        let yippee = document.getElementById("sound");
+        image.onclick = function(){
+            yippee.load();
+            yippee.play();
+        };
+    </script>
 </body>
 </html>
